@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+app-root {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background: $dark;
+    color: #fff;
+    z-index: 10;
+    nav {
+        .nav-container {
+            height: 80px;
+            padding-inline: 2%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+    }
+}
+
+main {
+    height: calc(100vh - 80px);
+    background: $light;
+    section {
+        .container {
+            padding-inline: 2%;
+            padding-block: 2rem;
+        }
+    }
+}
