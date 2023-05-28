@@ -23,7 +23,7 @@ export class ListComponent {
   }
 
   filter(){
-    this.service.load()
+    this.service.blogItems = this.service.localData;
     this.service.blogItems = this.service.blogItems.filter(item => (item.snippet).toLowerCase().includes(this.filterText))
   }
 

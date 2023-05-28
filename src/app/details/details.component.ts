@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogItem } from '../blog-item';
-import { faEdit, faRocket, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faRocket, faThumbsUp, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../blog.service';
 
@@ -15,6 +15,7 @@ export class DetailsComponent {
   blogIcon = faRocket
   deleteIcon = faTrash
   editIcon = faEdit
+  likeIcon = faThumbsUp 
 
 
   constructor(public service: BlogService, private router: Router, route: ActivatedRoute){
@@ -31,6 +32,17 @@ export class DetailsComponent {
 
   goToEdit(){
     this.router.navigate(['edit', this.actual.id])
+  }
+
+  navigate(){
+    this.router.navigate(['list'])
+  }
+
+  like(actual: BlogItem){
+    let old = this.service.find(actual.id);
+    old.like = actual.like + 1
+    this.service.save()
+    this.service.getTopRated()
   }
 
 }

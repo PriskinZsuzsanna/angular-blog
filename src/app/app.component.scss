@@ -22,7 +22,7 @@ ul.mobile-open {
     gap: 2rem;
     width: 100%;
     right: 0;
-    left:0;
+    left: 0;
     z-index: 9;
 }
 
@@ -31,7 +31,55 @@ ul.mobile-open {
     z-index: 11;
 }
 
+.menu-toggle {
+    display: block;
+
+    @media screen and (min-width: 700px) {
+        display: none;
+    }
+}
+
 ul.desktop {
     display: none;
-    //!!!!media---------------------------!!!!!!!!!!!!!!!!
+
+    @media screen and (min-width: 700px) {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+aside {
+
+    .top-rated {
+        padding: 2rem;
+        box-shadow: 1px 1px 7px $color;
+        border-radius: .5rem;
+
+        .top-blog {
+            margin-top: .5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: .5rem;
+
+            fa-icon {
+                font-size: .85rem;
+                padding: .45rem .65rem;
+                border-radius: 50%;
+                box-shadow: 1px 1px 7px $color;
+                margin-right: 1rem;
+                background: linear-gradient($dark, $light, $dark);
+            }
+            
+            button {
+                background: $color;
+                background: linear-gradient($light, $dark, $light);
+                color: $color;
+                scale: .9;
+                margin-top: 1rem;
+            }
+
+
+        }
+    }
 }

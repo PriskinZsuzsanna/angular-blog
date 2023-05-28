@@ -4,12 +4,13 @@
             <div class="flex-title">
                 <h2> <fa-icon [icon]=blogIcon></fa-icon> {{actual.title}} <span></span></h2>
                 <div class="icons">
+                    <fa-icon (click)="like(actual)" [icon]="likeIcon"></fa-icon>
                     <fa-icon (click)="goToEdit()" [icon]="editIcon"></fa-icon>
                     <fa-icon (click)="delete(actual.id)" [icon]="deleteIcon"></fa-icon>
                 </div>
             </div>
             <p>{{actual.article}}</p>
-            <button>Back to Articles</button>
+            <button (click)="navigate()">Back to Articles</button>
         </div>
     </div>
 </section>

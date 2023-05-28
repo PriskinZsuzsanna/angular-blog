@@ -34,7 +34,7 @@ button:hover {
     color: #fff;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -52,6 +52,7 @@ header {
     background: $dark;
     color: #fff;
     z-index: 10;
+
     nav {
         .nav-container {
             height: 80px;
@@ -65,16 +66,38 @@ header {
 }
 
 main {
-    height: calc(100vh - 80px);
-    background: $light;
-    section {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .main-section {
+
+        width: 66%;
+        min-height: calc(100vh - 80px);
+        background: $light;
+        
+        section {
+            .container {
+                padding-inline: 3%;
+                padding-block: 2rem;
+                position: relative;
+            }
+        }
+    }
+    
+    aside {
+        width: 34%;
+        min-height: calc(100vh - 80px);
+        background: linear-gradient($light,$dark,$light);
         .container {
-            padding-inline: 3%;
+            padding-inline: 6%;
             padding-block: 2rem;
             position: relative;
         }
     }
 }
+
 
 .form {
     width: 100%;
@@ -106,17 +129,17 @@ main {
             border-radius: .5rem;
             color: $color;
         }
-        
+
         textarea {
-           resize: none;
-           height: 10rem; 
+            resize: none;
+            height: 10rem;
         }
 
         button {
             width: 100%;
         }
 
-        
+
     }
 
 }

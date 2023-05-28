@@ -6,9 +6,12 @@ import { BlogItem } from './blog-item';
 })
 export class BlogService {
 
+  localData: Array<BlogItem> = new Array<BlogItem> ()
   blogItems: Array<BlogItem> = new Array<BlogItem> ()
   isMessage:boolean = false
   message:string = ""
+  likeCounter:number = 0
+  topRated:BlogItem = new BlogItem()
 
   constructor() {
     this.load()
@@ -16,7 +19,8 @@ export class BlogService {
 
   //load
   load(){
-    this.blogItems = JSON.parse(localStorage.getItem("blog") ?? "[]")
+    this.localData = JSON.parse(localStorage.getItem("blog") ?? "[]")
+    this.blogItems = this.localData
   }
 
   //add
@@ -49,6 +53,19 @@ export class BlogService {
   //delete
   delete(id:string){
     this.blogItems = this.blogItems.filter(item => item.id != id)
+    this.localData = this.blogItems
+  }
+
+  //top rated
+  getTopRated(){
+    this.blogItems.map(item => {
+      if(item.like >= this.likeCounter){
+        this.likeCounter = item.like
+        this.topRated = item
+      } 
+      console.log(this.likeCounter)
+      console.log(this.topRated)
+    })
   }
 
 }

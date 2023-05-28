@@ -6,7 +6,7 @@
       </div>
       <ul class="desktop" >
         <li><a routerLink="list">Home</a></li>
-        <li><a routerLink="list">New Article</a></li>
+        <li><a routerLink="create">New Article</a></li>
       </ul>
       <ul class="mobile" [ngClass]="{'mobile-open': open}">
         <li (click)="toggleMenu()"><a routerLink="list">Home</a></li>
@@ -21,5 +21,26 @@
 </header>
 
 <main>
-  <router-outlet></router-outlet>
+  <div class="main-section">
+    <router-outlet></router-outlet>
+  </div>
+
+  <aside>
+    <div class="container">
+      <div class="top-rated">
+        <h3>Top Rated Article</h3>
+        <p>Read our most liked content:</p>
+        <div class="top-blog">
+          <fa-icon [icon]=blogIcon></fa-icon>
+          <div class="top-titles">
+            <h4>{{this.service.topRated.title}}</h4>
+            <p>{{this.service.topRated.snippet}}</p>
+            <button (click)="getDetails(this.service.topRated)">Continue</button>
+          </div>
+        </div>
+                   
+      </div>
+    </div>
+  </aside>
 </main>
+
