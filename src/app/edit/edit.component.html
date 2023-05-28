@@ -1,5 +1,21 @@
 <section>
     <div class="container">
-        <p>edit works!</p>
+        <div class="form">
+            <div class="group">
+                <label>Add Title</label>
+                <input [(ngModel)]="actual.title" type="text">
+            </div>
+            <div class="group">
+                <label>Add Snippet</label>
+                <input [(ngModel)]="actual.snippet" type="text">
+            </div>
+            <div class="group">
+                <label>Add Article</label>
+                <textarea [(ngModel)]="actual.article"></textarea>
+            </div>
+            <div class="group">
+                <button (click)="saveChanges(actual)">Update Blog Article</button>
+            </div>
+        </div>
     </div>
 </section>

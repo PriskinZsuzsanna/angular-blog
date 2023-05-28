@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: $box-shadow;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
+    color: $color;
+    margin-bottom: 1rem;
+    background: transparent;
+}
+
+.blog-item {
+    width: 100%;
+    padding: 2rem;
+    box-shadow: $box-shadow;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+
+    h2 {
+        margin-bottom: 1.3rem;
+        position: relative;
+
+        fa-icon {
+            font-size: 1rem;
+            padding: .55rem .75rem;
+            border-radius: 50%;
+            box-shadow: 1px 1px 7px $color;
+            margin-right: 1rem;
+            background: linear-gradient($dark, $light, $dark);
+
+        }
+
+        span {
+            position: absolute;
+            height: 3px;
+            width: 10rem;
+            background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+            bottom: -.4rem;
+            left: 2.2rem;
+        }
+    };
+
+    p {
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+    }
+    
+    button {
+        margin-left: 3rem;
+        background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+        color: $color;    
+        box-shadow: 1px 1px 3px $color;
+        
+    }
+    
+}
+.popup {
+    padding: .7rem;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+    color: $color;    
+    box-shadow: 1px 1px 3px $color;
+    z-index: 100;
+    opacity: 1;
+    animation: fadeOut 4s ;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    };
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

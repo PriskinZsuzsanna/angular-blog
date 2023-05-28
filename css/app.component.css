@@ -2,7 +2,7 @@ ul.mobile {
   position: absolute;
   width: 0;
   height: calc(100vh - 80px);
-  background: #1C7AD9;
+  background: #abb2bd;
   color: #fff;
   top: 80px;
   bottom: 0;

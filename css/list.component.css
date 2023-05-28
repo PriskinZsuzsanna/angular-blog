@@ -1,1 +1,23 @@
-/*# sourceMappingURL=list.component.css.map */
+.blog-item {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  box-shadow: 1px 1px 3px #abb2bd;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+.blog-item h2 {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.blog-item h2 span {
+  position: absolute;
+  height: 3px;
+  width: 30%;
+  background: linear-gradient(90deg, #e5e7eb 10%, #abb2bd, #e5e7eb);
+  bottom: -0.5rem;
+  left: 0;
+}
+.blog-item p {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=list.component.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"list.component.css"}
+{"version":3,"sourceRoot":"","sources":["../src/app/list/list.component.scss","../src/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;EACA,YCFS;EDGT;EACA;;AAEA;EACI;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAIR;EACI","file":"list.component.css"}

@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 a {
@@ -13,11 +17,29 @@ ul {
     list-style: none;
 }
 
+button {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    box-shadow: $box-shadow;
+    padding: .6rem 2rem;
+    background: $dark;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background: $color;
+    color: #fff;
+}
+
 body{
     width: 100%;
     min-height: 100vh;
     display: flex;
     overflow-x: hidden;
+    color: $color;
 }
 
 app-root {
@@ -33,7 +55,7 @@ header {
     nav {
         .nav-container {
             height: 80px;
-            padding-inline: 2%;
+            padding-inline: 3%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -47,8 +69,54 @@ main {
     background: $light;
     section {
         .container {
-            padding-inline: 2%;
+            padding-inline: 3%;
             padding-block: 2rem;
+            position: relative;
         }
     }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .group {
+        width: 100%;
+
+        label {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            margin-top: .7rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            box-shadow: $box-shadow;
+            padding: .8rem 1.2rem;
+            border-radius: .5rem;
+            color: $color;
+        }
+        
+        textarea {
+           resize: none;
+           height: 10rem; 
+        }
+
+        button {
+            width: 100%;
+        }
+
+        
+    }
+
 }

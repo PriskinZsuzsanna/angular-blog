@@ -14,11 +14,29 @@ ul {
   list-style: none;
 }
 
+button {
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px #abb2bd;
+  padding: 0.6rem 2rem;
+  background: #abb2bd;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #667282;
+  color: #fff;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
   display: flex;
   overflow-x: hidden;
+  color: #667282;
 }
 
 app-root {
@@ -28,13 +46,13 @@ app-root {
 }
 
 header {
-  background: #1C7AD9;
+  background: #abb2bd;
   color: #fff;
   z-index: 10;
 }
 header nav .nav-container {
   height: 80px;
-  padding-inline: 2%;
+  padding-inline: 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,9 +61,45 @@ header nav .nav-container {
 
 main {
   height: calc(100vh - 80px);
-  background: #C2F2FF;
+  background: #e5e7eb;
 }
 main section .container {
-  padding-inline: 2%;
+  padding-inline: 3%;
   padding-block: 2rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.form .group {
+  width: 100%;
+}
+.form .group label {
+  width: 100%;
+}
+.form .group input,
+.form .group textarea {
+  margin-top: 0.7rem;
+}
+.form .group input,
+.form .group textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 3px #abb2bd;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  color: #667282;
+}
+.form .group textarea {
+  resize: none;
+  height: 10rem;
+}
+.form .group button {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

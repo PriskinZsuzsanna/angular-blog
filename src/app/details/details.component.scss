@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.blog-item {
+    width: 100%;
+    padding: 2rem;
+    box-shadow: $box-shadow;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+
+    .flex-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    fa-icon {
+        font-size: 1rem;
+        padding: .55rem .75rem;
+        border-radius: 50%;
+        box-shadow: 1px 1px 7px $color;
+        margin-right: 1rem;
+        background: linear-gradient($dark, $light, $dark);
+        cursor: pointer;
+    }
+    h2 {
+        margin-bottom: 1.3rem;
+        position: relative;
+
+
+        span {
+            position: absolute;
+            height: 3px;
+            width: 10rem;
+            background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+            bottom: -.4rem;
+            left: 2.2rem;
+        }
+    };
+
+    p {
+        margin-bottom: 1rem;
+        margin-left: 5rem;
+    }
+    
+    button {
+        margin-left: 5rem;
+        background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+        color: $color;    
+        box-shadow: 1px 1px 3px $color;
+            
+    }
+}

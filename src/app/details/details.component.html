@@ -1,5 +1,15 @@
 <section>
     <div class="container">
-        <p>details works!</p>
+        <div class="blog-item">
+            <div class="flex-title">
+                <h2> <fa-icon [icon]=blogIcon></fa-icon> {{actual.title}} <span></span></h2>
+                <div class="icons">
+                    <fa-icon (click)="goToEdit()" [icon]="editIcon"></fa-icon>
+                    <fa-icon (click)="delete(actual.id)" [icon]="deleteIcon"></fa-icon>
+                </div>
+            </div>
+            <p>{{actual.article}}</p>
+            <button>Back to Articles</button>
+        </div>
     </div>
 </section>
