@@ -25,12 +25,15 @@ button {
     padding: .6rem 2rem;
     background: linear-gradient(90deg, $light 10%, $dark, $light);
     color: $color;
+    background: $dark;
+    color: $light;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 
 button:hover {
     background: linear-gradient($dark, $light, $dark);
+    color: $color;
 }
 
 body {
@@ -78,6 +81,7 @@ main {
 
         width: 100%;
         background: $light;
+        background: linear-gradient(130deg, $light, $dark-alpha, $light);
 
         @media screen and (min-width: 700px){
             min-height: calc(100% - 80px);
@@ -96,6 +100,8 @@ main {
     aside {
         width: 100%;
         background: linear-gradient($light,$dark,$light);
+        background: linear-gradient(50deg, $light, $dark-alpha, $light);
+        background: $dark;
 
         
         @media screen and (min-width: 700px){
@@ -110,6 +116,7 @@ main {
 
             @media screen and (min-width: 700px){
                 padding-inline: 6%;
+                padding-block: 0 2rem;
             }
         }
     }

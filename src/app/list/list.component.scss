@@ -17,6 +17,8 @@ input{
     box-shadow: $box-shadow;
     margin-bottom: 1rem;
     border-radius: .5rem;
+    /*background: linear-gradient(130deg,  $light, $dark, $light, $dark);*/
+    background: transparent;
 
     h2 {
         margin-bottom: 1.3rem;
@@ -48,16 +50,9 @@ input{
     }
     
     button {
-        margin-left: 3rem;
-        background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
-        color: $color;    
-        box-shadow: 1px 1px 3px $color;
+        margin-left: 3rem;   
     }
 
-    button:hover {
-        background: linear-gradient($dark, $light, $dark);
-    }
-    
     
 }
 .popup {

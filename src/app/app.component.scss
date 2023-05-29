@@ -54,8 +54,12 @@ aside {
     .latest {
         padding: 2rem;
         box-shadow: 1px 1px 7px $color;
+        box-shadow: inset 3px 3px 5px $color,
+                    inset -3px -3px 5px $color;
         border-radius: .5rem;
         margin-bottom: 2rem;
+        background: linear-gradient(130deg, $light, $dark, $light);
+        color: $color;
 
         .flex {
             width: 100%;
@@ -75,6 +79,7 @@ aside {
             padding: 1rem;
             border-radius: .5rem;
             box-shadow: $box-shadow;
+            box-shadow: 1px 1px 3px $light;
             position: relative;
 
             fa-icon {
@@ -87,6 +92,7 @@ aside {
                 box-shadow: 1px 1px 7px $color;
                 margin-right: 1rem;
                 background: linear-gradient($dark, $light, $dark);
+                color: $dark;
                 cursor: pointer;
             }
 
