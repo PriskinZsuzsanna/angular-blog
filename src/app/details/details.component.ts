@@ -29,6 +29,7 @@ export class DetailsComponent {
   delete(id:string){
     this.service.delete(id)
     this.service.save()
+    this.service.getLatest()
     this.router.navigate(['list'])
   }
 
