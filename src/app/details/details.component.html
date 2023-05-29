@@ -10,7 +10,30 @@
                 </div>
             </div>
             <p>{{actual.article}}</p>
-            <button (click)="navigate()">Back to Articles</button>
+            <div class="buttons">
+                <button (click)="navigate()">Back to Articles</button>
+                <button (click)="this.service.openPopup(actual.id)">Leave a comment</button>
+            </div>
+        </div>
+        <div *ngIf="connectingComments != []" class="comments">
+            <div class="container">
+                <h3>Comments:</h3>
+                <div *ngFor="let x of connectingComments" class="comment">
+                    <p>"{{x.comment}}"</p>
+                    <div class="button">
+                        <button class="comment-author">by: {{x.name}}</button>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div *ngIf="this.service.isPopupOpen" class="comment-popup">
+            <h3>{{actual.title}}</h3>
+            <input [(ngModel)]="this.service.newCommentName" placeholder="Name..." type="text">
+            <textarea [(ngModel)]="this.service.newCommentText" placeholder="Comment ..."></textarea>
+            <button (click)="this.service.saveNewComment(actual.id)">Comment</button>
         </div>
     </div>
 </section>

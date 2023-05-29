@@ -23,15 +23,14 @@ button {
     border-radius: 1rem;
     box-shadow: $box-shadow;
     padding: .6rem 2rem;
-    background: $dark;
-    color: #fff;
+    background: linear-gradient(90deg, $light 10%, $dark, $light);
+    color: $color;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 
 button:hover {
-    background: $color;
-    color: #fff;
+    background: linear-gradient($dark, $light, $dark);
 }
 
 body {
@@ -40,6 +39,7 @@ body {
     display: flex;
     overflow-x: hidden;
     color: $color;
+    background: $light;
 }
 
 app-root {
@@ -66,17 +66,24 @@ header {
 }
 
 main {
+    min-height: calc(100% - 80px);
+    display: grid;
+    grid-template-columns: 1fr;
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @media screen and (min-width: 700px){
+        grid-template-columns: 2fr 1fr;
+    }
 
     .main-section {
 
-        width: 66%;
-        min-height: calc(100vh - 80px);
+        width: 100%;
         background: $light;
-        
+
+        @media screen and (min-width: 700px){
+            min-height: calc(100% - 80px);
+            height: 100%;
+        }
+       
         section {
             .container {
                 padding-inline: 3%;
@@ -87,13 +94,23 @@ main {
     }
     
     aside {
-        width: 34%;
-        min-height: calc(100vh - 80px);
+        width: 100%;
         background: linear-gradient($light,$dark,$light);
+
+        
+        @media screen and (min-width: 700px){
+            min-height: calc(100% - 80px);
+            height: 100%;
+        }
+
         .container {
-            padding-inline: 6%;
+            padding-inline: 3%;
             padding-block: 2rem;
             position: relative;
+
+            @media screen and (min-width: 700px){
+                padding-inline: 6%;
+            }
         }
     }
 }

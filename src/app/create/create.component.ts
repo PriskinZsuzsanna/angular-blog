@@ -19,6 +19,7 @@ export class CreateComponent {
 
   //create
   create(actual:BlogItem){
+    console.log(actual)
     this.service.addNew(actual)
     this.actual = new BlogItem ()
     this.router.navigate(['list'])

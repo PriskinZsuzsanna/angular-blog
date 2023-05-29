@@ -16,12 +16,14 @@ export class DetailsComponent {
   deleteIcon = faTrash
   editIcon = faEdit
   likeIcon = faThumbsUp 
+  connectingComments: any = [{"name": "", "comment": ""}]
 
 
   constructor(public service: BlogService, private router: Router, route: ActivatedRoute){
     route.params.subscribe(t=> //objectet ad vissza egy id-vel {id:zgfuzupe}
       
       this.actual = this.service.find(t['id']))
+      this.showComments()
   }
 
   delete(id:string){
@@ -43,6 +45,11 @@ export class DetailsComponent {
     old.like = actual.like + 1
     this.service.save()
     this.service.getTopRated()
+  }
+
+  showComments(){
+    this.connectingComments = this.actual.comment
+    console.log(this.connectingComments[0].name)
   }
 
 }

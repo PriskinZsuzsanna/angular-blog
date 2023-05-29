@@ -12,9 +12,15 @@ export class BlogService {
   message:string = ""
   likeCounter:number = 0
   topRated:BlogItem = new BlogItem()
+  latest: BlogItem = new BlogItem ()
+  isPopupOpen: boolean = false
+  newCommentName:string = ""
+  newCommentText:string = ""
+  newComment: Object = {"name": this.newCommentName, "comment": this.newCommentText}
 
   constructor() {
     this.load()
+    this.getLatest()
    }
 
   //load
@@ -25,8 +31,11 @@ export class BlogService {
 
   //add
   addNew(actual:BlogItem){
+    console.log(actual)
     this.blogItems.push(actual)
+    console.log(this.blogItems)
     this.save()
+    this.getLatest()
   }
 
 
@@ -67,5 +76,43 @@ export class BlogService {
       console.log(this.topRated)
     })
   }
+
+  getLatest(){
+      this.latest = this.blogItems[this.blogItems.length -1] || {}
+  }
+
+  openPopup(id:string){
+    let actual = this.find(id)
+    this.isPopupOpen = !this.isPopupOpen
+  }
+
+  saveNewComment(id:string){
+    let actual = this.find(id)
+    this.newCommentName = this.newCommentName
+    this.newCommentText = this.newCommentText
+    this.newComment = {"name" : this.newCommentName, "comment": this.newCommentText}
+    console.log(this.newCommentName, this.newCommentText, this.newComment)
+    actual.comment?.push(this.newComment)
+    console.log(actual, actual.comment)
+    this.newCommentName = ""
+    this.newCommentText = ""
+    this.newComment = new Object ()
+    this.isPopupOpen = false
+    this.save()
+  }
+
+
+  /*updateWithComment(edited: BlogItem){
+    let old = this.find(edited.id);
+    old.title = edited.title;
+    old.snippet = edited.snippet;
+    old.article = edited.article;
+    //old.name = edited.name
+    //old.commentText = edited.commentText
+    old.comment = {"name": actual.name, comment:actual.commentText}
+    //this.save();
+  }*/
+
+ 
 
 }

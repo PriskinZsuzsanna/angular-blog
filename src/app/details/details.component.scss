@@ -39,14 +39,86 @@
 
     p {
         margin-bottom: 1rem;
-        margin-left: 5rem;
+        margin-left: 3rem;
+    }
+
+    .buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
+            color: $color;    
+            box-shadow: 1px 1px 3px $color;
+        }
     }
     
+}
+
+.comments {
+    box-shadow: $box-shadow;
+    border-radius: .5rem;
+
+    .comment {
+        position: relative;
+        margin-bottom: 1.7rem;
+        p {
+            margin-left: 1rem;
+        }
+        span {
+            position: absolute;
+            bottom: - 1rem;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg,$dark, $light, $dark, $light, $dark);
+        }
+
+        .button{
+            display: flex;
+            justify-content: flex-end;
+            .comment-author {
+                margin-top: 1rem;
+                scale: .7;
+            }
+        }
+    }
+}
+
+.comment-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    padding: 5%;
+    background: $dark-alpha;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+
+    input,
+    textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        box-shadow: $box-shadow;
+        padding: .8rem 1.2rem;
+        border-radius: .5rem;
+        color: $color;
+    }
+
+    textarea {
+        resize: none;
+        height: 10rem;
+    }
+
     button {
-        margin-left: 5rem;
-        background: linear-gradient(90deg, transparent 5%, $light 10%, $dark, $light);
-        color: $color;    
-        box-shadow: 1px 1px 3px $color;
-            
+        width: 100%;
     }
 }

@@ -50,35 +50,45 @@ ul.desktop {
 
 aside {
 
-    .top-rated {
+    .top-rated,
+    .latest {
         padding: 2rem;
         box-shadow: 1px 1px 7px $color;
         border-radius: .5rem;
+        margin-bottom: 2rem;
+
+        .flex {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @media screen and (min-width: 700px){
+                flex-direction: column;
+                gap: .7rem;
+                margin-bottom: 1.3rem;
+            }
+        }
 
         .top-blog {
-            margin-top: .5rem;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: .5rem;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            box-shadow: $box-shadow;
+            position: relative;
 
             fa-icon {
-                font-size: .85rem;
-                padding: .45rem .65rem;
+                position: absolute;
+                right: -2rem;
+                top: -1.5rem;
+                font-size: 1rem;
+                padding: .55rem .75rem;
                 border-radius: 50%;
                 box-shadow: 1px 1px 7px $color;
                 margin-right: 1rem;
                 background: linear-gradient($dark, $light, $dark);
+                cursor: pointer;
             }
-            
-            button {
-                background: $color;
-                background: linear-gradient($light, $dark, $light);
-                color: $color;
-                scale: .9;
-                margin-top: 1rem;
-            }
-
 
         }
     }

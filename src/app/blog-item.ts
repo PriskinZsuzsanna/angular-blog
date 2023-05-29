@@ -6,4 +6,5 @@ export class BlogItem {
     snippet:string = "";
     like: number = 0;
     id:string = Guid.create().toString();
+    comment?:Array<Object> = [{"name": "Moderator", "comment": "Leave a comment!"}]
 }

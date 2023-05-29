@@ -27,19 +27,44 @@
 
   <aside>
     <div class="container">
+
       <div class="top-rated">
-        <h3>Top Rated Article</h3>
-        <p>Read our most liked content:</p>
+        <div class="flex">
+          <div class="left">
+            <h3>Top Rated Article</h3>
+            <p>Read our most liked content:</p>
+          </div>
+          <button (click)="getDetails(this.service.topRated)">Continue</button>
+        </div>
+       
         <div class="top-blog">
-          <fa-icon [icon]=blogIcon></fa-icon>
+          <fa-icon (click)="getDetails(this.service.topRated)" [icon]=blogIcon></fa-icon>
           <div class="top-titles">
             <h4>{{this.service.topRated.title}}</h4>
             <p>{{this.service.topRated.snippet}}</p>
-            <button (click)="getDetails(this.service.topRated)">Continue</button>
+          </div>
+        </div>             
+      </div>
+
+      <div class="latest">
+        <div class="flex">
+          <div class="left">
+            <h3>Latest Article</h3>
+            <p>Read our latest content:</p>
+          </div>
+          <button (click)="getDetails(this.service.latest)">Continue</button>
+        </div>
+       
+        <div class="top-blog">
+          <fa-icon (click)="getDetails(this.service.latest)" [icon]=blogIcon></fa-icon>
+          <div class="top-titles">
+            <h4>{{this.service.latest.title || ""}}</h4>
+            <p>{{this.service.latest.snippet || ""}}</p>
           </div>
         </div>
                    
       </div>
+
     </div>
   </aside>
 </main>
