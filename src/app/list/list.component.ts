@@ -27,4 +27,8 @@ export class ListComponent {
     this.service.blogItems = this.service.blogItems.filter(item => (item.snippet).toLowerCase().includes(this.filterText))
   }
 
+  goToCreate(){
+    this.router.navigate(['create'])
+  }
+
 }

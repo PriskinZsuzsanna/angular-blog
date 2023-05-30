@@ -15,7 +15,7 @@
                 <button (click)="this.service.openPopup(actual.id)">Leave a comment</button>
             </div>
         </div>
-        <div *ngIf="connectingComments != []" class="comments">
+        <div class="comments">
             <div class="container">
                 <h3>Comments:</h3>
                 <div *ngFor="let x of connectingComments" class="comment">

@@ -34,10 +34,10 @@
             <h3>Top Rated Article</h3>
             <p>Read our most liked content:</p>
           </div>
-          <button (click)="getDetails(this.service.topRated)">Continue</button>
+          <button *ngIf="this.service.topRated.title" (click)="getDetails(this.service.topRated)">Continue</button>
         </div>
        
-        <div class="top-blog">
+        <div *ngIf="this.service.topRated.title" class="top-blog">
           <fa-icon (click)="getDetails(this.service.topRated)" [icon]=blogIcon></fa-icon>
           <div class="top-titles">
             <h4>{{this.service.topRated.title}}</h4>
@@ -52,10 +52,10 @@
             <h3>Latest Article</h3>
             <p>Read our latest content:</p>
           </div>
-          <button (click)="getDetails(this.service.latest)">Continue</button>
+          <button *ngIf="this.service.latest.title" (click)="getDetails(this.service.latest)">Continue</button>
         </div>
        
-        <div class="top-blog">
+        <div *ngIf="this.service.latest.title" class="top-blog">
           <fa-icon (click)="getDetails(this.service.latest)" [icon]=blogIcon></fa-icon>
           <div class="top-titles">
             <h4>{{this.service.latest.title || ""}}</h4>
@@ -64,6 +64,7 @@
         </div>
                    
       </div>
+
 
     </div>
   </aside>
