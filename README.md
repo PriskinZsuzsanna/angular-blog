@@ -14,7 +14,7 @@ Angular Blog
 
 
 ### Links
-https://priskinzsuzsanna.github.io/angular-blog/list
+https://priskinzsuzsanna.github.io/angular-blog/
 
 ### Screenshot
 
