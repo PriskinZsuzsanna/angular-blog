@@ -6,7 +6,7 @@
 
         <button (click)="goToCreate()">Add new article</button>
 
-        <div *ngIf="this.service.blogItems[0]" class="search">
+        <div class="search">
             <input [(ngModel)]="filterText" (ngModelChange)="filter()" type="text" placeholder="Find a snippet ...">
         </div>
 
