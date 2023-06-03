@@ -10,6 +10,8 @@ Angular Blog
 - Components
 - Service.ts
 - SASS/SCSS
+- Use Font-awesome with angular
+- Upload picture as file, (change)="upload($event)" 
 - MOBILE-FIRST WORKFLOW
 
 
