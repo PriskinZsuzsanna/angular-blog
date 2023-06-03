@@ -33,7 +33,6 @@ export class BlogService {
   addNew(actual:BlogItem){
     console.log(actual)
     this.blogItems.push(actual)
-    console.log(this.blogItems)
     this.save()
     this.getLatest()
   }
@@ -67,13 +66,12 @@ export class BlogService {
 
   //top rated
   getTopRated(){
+    this.likeCounter = 0
     this.blogItems.map(item => {
-      if(item.like >= this.likeCounter){
+      if(item.like > this.likeCounter){
         this.likeCounter = item.like
         this.topRated = item
       } 
-      console.log(this.likeCounter)
-      console.log(this.topRated)
     })
   }
 

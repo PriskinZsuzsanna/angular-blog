@@ -29,7 +29,9 @@ export class DetailsComponent {
   delete(id:string){
     this.service.delete(id)
     this.service.save()
+    this.service.load()
     this.service.getLatest()
+    this.service.getTopRated()
     this.router.navigate(['list'])
   }
 
@@ -50,7 +52,6 @@ export class DetailsComponent {
 
   showComments(){
     this.connectingComments = this.actual.comment
-    console.log(this.connectingComments[0].name)
   }
 
 }

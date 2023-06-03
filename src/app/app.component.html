@@ -34,18 +34,18 @@
             <h3>Top Rated Article</h3>
             <p>Read our most liked content:</p>
           </div>
-          <button *ngIf="this.service.topRated.like > 0" (click)="getDetails(this.service.topRated)">Continue</button>
+          <button *ngIf="this.service.likeCounter > 0" (click)="getDetails(this.service.topRated)">Continue</button>
         </div>
        
-        <div *ngIf="this.service.topRated.like > 0" class="top-blog">
+        <div *ngIf="this.service.likeCounter > 0" class="top-blog">
           <fa-icon (click)="getDetails(this.service.topRated)" [icon]=blogIcon></fa-icon>
-          <div class="top-titles">
-            <h4>{{this.service.topRated.title}}</h4>
-            <p>{{this.service.topRated.snippet}}</p>
+          <div *ngIf="this.service.likeCounter > 0" class="top-titles">
+            <h4>{{this.service.topRated.title || ""}}</h4>
+            <p>{{this.service.topRated.snippet || ""}}</p>
             <p class="show-likes">likes: {{this.service.topRated.like}}</p>
           </div>
-        </div>             
-      </div>
+        </div> 
+       </div>
 
       <div class="latest">
         <div class="flex">

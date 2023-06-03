@@ -48,6 +48,7 @@ body {
 app-root {
     width: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -59,7 +60,7 @@ header {
     nav {
         .nav-container {
             height: 80px;
-            padding-inline: 3%;
+            padding-inline: 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -90,7 +91,7 @@ main {
        
         section {
             .container {
-                padding-inline: 3%;
+                padding-inline: 5%;
                 padding-block: 2rem;
                 position: relative;
             }
@@ -110,7 +111,7 @@ main {
         }
 
         .container {
-            padding-inline: 3%;
+            padding-inline: 5%;
             padding-block: 2rem;
             position: relative;
 

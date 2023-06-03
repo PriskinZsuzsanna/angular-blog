@@ -11,7 +11,7 @@
         </div>
 
         <div *ngFor="let b of this.service.blogItems" class="blog-item">
-            <div>
+            <div class="blog-text">
                 <h2> <fa-icon [icon]=blogIcon></fa-icon> {{b.title}} <span></span></h2>
                 <p>{{b.snippet}}</p>
                 <button (click)="getDetails(b)">Read More</button>
