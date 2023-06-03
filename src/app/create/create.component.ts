@@ -24,4 +24,13 @@ export class CreateComponent {
     this.actual = new BlogItem ()
     this.router.navigate(['list'])
   }
+
+  upload(event: any){
+    let file : File = event.target?.files[0];
+    const reader = new FileReader();
+    reader.onload = (e:any) => {
+      this.actual.picture = e.target.result;
+    }
+    reader.readAsDataURL(file);
+  }
 }

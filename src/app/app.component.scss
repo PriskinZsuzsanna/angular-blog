@@ -82,6 +82,14 @@ aside {
             box-shadow: 1px 1px 3px $light;
             position: relative;
 
+            .show-likes {
+                margin-top: 1rem;
+                padding: .5rem;
+                background: $dark;
+                border-radius: .5rem;
+                color: #fff;
+            }
+
             fa-icon {
                 position: absolute;
                 right: -2rem;
